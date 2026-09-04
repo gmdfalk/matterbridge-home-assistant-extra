@@ -17,8 +17,8 @@ RUN set -eux; \
     grep -Fx 'HOME_DIR=/addons/matterbridge' "$RUN_FILE"; \
     grep -Fx 'ARGS="--docker --homedir $HOME_DIR"' "$RUN_FILE"; \
     sed -i \
-      -e 's|^HOME_DIR=/addons/matterbridge$|HOME_DIR=/data/matterbridge|' \
-      -e 's|^ARGS="--docker --homedir \$HOME_DIR"$|ARGS="--docker --homedir $HOME_DIR --frontend 8284 --port 5560 --profile HAExtra2"|' \
+      -e 's|^HOME_DIR=/addons/matterbridge$|HOME_DIR=/data/matterbridge-extra-3|' \
+      -e 's|^ARGS="--docker --homedir \$HOME_DIR"$|ARGS="--docker --homedir $HOME_DIR --frontend 8286 --port 5600 --profile HAExtra3"|' \
       "$RUN_FILE"; \
-    grep -Fx 'HOME_DIR=/data/matterbridge' "$RUN_FILE"; \
-    grep -Fx 'ARGS="--docker --homedir $HOME_DIR --frontend 8284 --port 5560 --profile HAExtra2"' "$RUN_FILE"
+    grep -Fx 'HOME_DIR=/data/matterbridge-extra-3' "$RUN_FILE"; \
+    grep -Fx 'ARGS="--docker --homedir $HOME_DIR --frontend 8286 --port 5600 --profile HAExtra3"' "$RUN_FILE"

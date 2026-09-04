@@ -1,18 +1,18 @@
-name: Matterbridge Extra
+name: Matterbridge Extra 2
 version: 2026.8.4
-slug: matterbridge_extra
-description: Additional isolated Matterbridge Home Assistant Application
+slug: matterbridge_extra_2
+description: Additional isolated Matterbridge Home Assistant Application 2
 url: "https://github.com/gmdfalk/matterbridge-home-assistant-extra"
 
 arch:
   - amd64
   - aarch64
 
-panel_title: Matterbridge Extra
+panel_title: Matterbridge Extra 2
 panel_icon: mdi:bridge
 
 ingress: true
-ingress_port: 8284
+ingress_port: 8285
 
 host_network: true
 startup: services
