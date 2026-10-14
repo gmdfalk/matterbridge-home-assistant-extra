@@ -1,5 +1,5 @@
 name: Matterbridge Extra 2
-version: 2026.8.4
+version: 2026.10.14
 slug: matterbridge_extra_2
 description: Additional isolated Matterbridge Home Assistant Application 2
 url: "https://github.com/gmdfalk/matterbridge-home-assistant-extra"
@@ -27,4 +27,4 @@ schema:
 options:
   frontend_bind: 0.0.0.0
   branch: main
-  force_update: true
+  force_update: false

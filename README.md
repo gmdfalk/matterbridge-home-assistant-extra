@@ -11,7 +11,7 @@ the official Matterbridge app.
 | --- | --- | ---: | ---: | --- | --- |
 | — | Official Matterbridge | 8283 | 5540 | upstream default | /addons/matterbridge |
 | matterbridge-extra-1/ | Matterbridge Extra 1 | 8284 | 5560 | HAExtra1 | /data/matterbridge-extra-1 |
-| matterbridge-extra-2/ | Matterbridge Extra 2 | 8285 | 5580 | HAExtra2 | /data/matterbridge-extra-2 |
+| matterbridge-extra-2/ | Matterbridge Extra 2 | 8285 | 5581 | HAExtra2 | /data/matterbridge-extra-2 |
 | matterbridge-extra-3/ | Matterbridge Extra 3 | 8286 | 5600 | HAExtra3 | /data/matterbridge-extra-3 |
 
 Each extra app is a thin adapter around Luligu's official release image. The
@@ -28,3 +28,8 @@ that the ports are free before starting an additional instance.
 To add a fourth instance later, copy one app directory, assign a new slug,
 frontend port, Matter port, profile, and data directory, then add it to this
 table.
+
+Extra 2 uses Matter base port 5581 because the Home Assistant Matter Server
+uses TCP 5580 for its WebSocket API. Its frontend remains 8285, following the
+8283 / 8284 / 8285 sequence. Adapter version 2026.10.14 keeps the upstream
+2026.8.4 image; this port fix does not upgrade the Matterbridge runtime.

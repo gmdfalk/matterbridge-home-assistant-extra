@@ -7,7 +7,7 @@ release image, not a Matterbridge fork.
 | Setting | Value |
 | --- | --- |
 | Frontend | 8285 |
-| Matter base port | 5580 |
+| Matter base port | 5581 |
 | Profile | HAExtra2 |
 | Home directory | /data/matterbridge-extra-2 |
 | Ingress | app ingress on 8285 |

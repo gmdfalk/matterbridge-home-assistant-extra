@@ -1,5 +1,6 @@
-ARG BUILD_VERSION
-FROM luligu/matterbridge:${BUILD_VERSION}
+# Keep the upstream runtime stable when releasing adapter-only changes.
+ARG UPSTREAM_VERSION=2026.8.4
+FROM luligu/matterbridge:${UPSTREAM_VERSION}
 
 ARG BUILD_VERSION
 ARG BUILD_ARCH
@@ -18,7 +19,7 @@ RUN set -eux; \
     grep -Fx 'ARGS="--docker --homedir $HOME_DIR"' "$RUN_FILE"; \
     sed -i \
       -e 's|^HOME_DIR=/addons/matterbridge$|HOME_DIR=/data/matterbridge-extra-2|' \
-      -e 's|^ARGS="--docker --homedir \$HOME_DIR"$|ARGS="--docker --homedir $HOME_DIR --frontend 8285 --port 5580 --profile HAExtra2"|' \
+      -e 's|^ARGS="--docker --homedir \$HOME_DIR"$|ARGS="--docker --homedir $HOME_DIR --frontend 8285 --port 5581 --profile HAExtra2"|' \
       "$RUN_FILE"; \
     grep -Fx 'HOME_DIR=/data/matterbridge-extra-2' "$RUN_FILE"; \
-    grep -Fx 'ARGS="--docker --homedir $HOME_DIR --frontend 8285 --port 5580 --profile HAExtra2"' "$RUN_FILE"
+    grep -Fx 'ARGS="--docker --homedir $HOME_DIR --frontend 8285 --port 5581 --profile HAExtra2"' "$RUN_FILE"
